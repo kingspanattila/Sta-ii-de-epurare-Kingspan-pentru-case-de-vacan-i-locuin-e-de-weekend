@@ -56,9 +56,22 @@
   <h2>Concluzie</h2>
   <p>Dacă ai o casă de vacanță sau o locuință de weekend, <strong>Kingspan BioTec® Flo și BioDisc®</strong> sunt cele mai bune soluții pentru confort, legalitate și protecția mediului.</p>
 
-  <p><strong>Pentru ofertă personalizată:</strong> 
-     <a href="mailto:kingspanattila@gmail.com?subject=Solicitare ofertă Kingspan BioTec Flo/BioDisc&body=Bună ziua,%0D%0ASunt interesat de o ofertă pentru o stație de epurare pentru casa mea de vacanță.">Trimite email</a>
-  </p>
+ <p><strong>Pentru ofertă personalizată:</strong></p>
+
+<a href="mailto:kingspanattila@gmail.com?subject=Solicitare ofertă Kingspan BioTec Flo/BioDisc&body=Bună ziua,%0D%0ASunt interesat de o ofertă pentru o stație de epurare pentru casa mea de vacanță." onclick="showEmailMessage()">
+  <button style="padding: 10px 20px; background-color: #0077cc; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Trimite email
+  </button>
+</a>
+
+<p id="emailMessage" style="color: green; font-weight: bold; margin-top: 10px;"></p>
+
+<script>
+  function showEmailMessage() {
+    document.getElementById("emailMessage").textContent = "✅ Email pregătit! Verifică aplicația ta de email.";
+  }
+</script>
+
 
 </body>
 </html>

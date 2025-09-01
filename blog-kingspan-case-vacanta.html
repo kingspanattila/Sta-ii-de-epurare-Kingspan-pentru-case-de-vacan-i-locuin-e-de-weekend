@@ -51,20 +51,76 @@
   <h2>Solicită ofertă personalizată</h2>
 <p>Completează formularul de mai jos și vei primi o ofertă adaptată nevoilor tale.</p>
 
-<form action="https://formspree.io/f/xgvlzzbb" method="POST">
-  <label for="name">Nume:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
+<style>
+  .form-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 2px solid #0077cc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    font-family: Arial, sans-serif;
+  }
 
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
+  .form-section h2 {
+    text-align: center;
+    color: #0077cc;
+    margin-bottom: 20px;
+  }
 
-  <label for="message">Mesaj:</label><br>
-  <textarea id="message" name="message" rows="5" required></textarea><br><br>
+  .form-section label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+  }
 
-  <input type="hidden" name="_redirect" value="https://kingspanattila.github.io/Sta-ii-de-epurare-Kingspan-pentru-case-de-vacan-i-locuin-e-de-weekend/multumim.html">
+  .form-section input,
+  .form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
 
-  <button type="submit">Trimite cererea</button>
-</form>
+  .form-section button {
+    background-color: #0077cc;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .form-section button:hover {
+    background-color: #005fa3;
+  }
+</style>
+
+<div class="form-section">
+  <h2>Solicită ofertă personalizată</h2>
+  <form action="https://formspree.io/f/xgvlzzbb" method="POST">
+    <label for="name">Nume:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Mesaj:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <input type="hidden" name="_redirect" value="https://kingspanattila.github.io/Sta-ii-de-epurare-Kingspan-pentru-case-de-vacan-i-locuin-e-de-weekend/multumim.html">
+
+    <button type="submit">Trimite cererea</button>
+  </form>
+</div>
+Adăugat stilizare la formular)
 
 
 </body>

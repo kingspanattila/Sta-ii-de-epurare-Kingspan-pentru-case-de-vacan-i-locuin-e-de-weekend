@@ -106,23 +106,39 @@
 <div class="form-section">
   <h2>Solicită ofertă personalizată</h2>
   <form action="https://formspree.io/f/xgvlzzbb" method="POST">
+    
     <label for="name">Nume:</label>
     <input type="text" id="name" name="name" required>
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="_replyto" required>
-<input type="hidden" name="_cc" value="adresa-ta@email.com">
 
     <label for="message">Mesaj:</label>
     <textarea id="message" name="message" rows="5" required></textarea>
 
+    <!-- Honeypot: câmp invizibil pentru roboți -->
+    <label style="display:none;">
+      Nu completa acest câmp:
+      <input type="text" name="honeypot">
+    </label>
+
     <input type="hidden" name="_redirect" value="https://kingspanattila.github.io/Sta-ii-de-epurare-Kingspan-pentru-case-de-vacan-i-locuin-e-de-weekend/multumim.html">
+    <input type="hidden" name="_cc" value="adresa-ta@email.com">
 
     <button type="submit">Trimite cererea</button>
   </form>
 </div>
+
 Adăugat stilizare la formular)
 
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    const honeypot = document.querySelector("input[name='honeypot']").value;
+    if (honeypot) {
+      e.preventDefault(); // Blochează trimiterea dacă botul a completat câmpul
+    }
+  });
+</script>
 
 </body>
 </html>
